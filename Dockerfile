@@ -13,3 +13,4 @@ COPY --from=builder /usr/app/target/ghs-server*.jar /root/
 ENTRYPOINT java -jar /root/ghs-server-*.jar -Djava.awt.headless=true
 VOLUME /root/.ghs
 EXPOSE 8080
+EXPOSE 9090
