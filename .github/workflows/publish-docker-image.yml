@@ -6,9 +6,6 @@ on:
     tags:
       - 'v*'
   pull_request:
-    branches:
-      - 'main'
-      - 'docker/push-workflow'
 
 name: "Publish Docker Image"
 
