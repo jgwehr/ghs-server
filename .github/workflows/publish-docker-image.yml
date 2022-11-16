@@ -1,11 +1,7 @@
 on:
   push:
-    branches:
-      - 'main'
-      - 'docker/push-workflow'
     tags:
       - 'v*'
-  pull_request:
 
 name: "Publish Docker Image"
 
