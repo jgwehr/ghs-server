@@ -2,6 +2,7 @@ on:
   push:
     branches:
       - 'main'
+      - 'docker/push-workflow'
     tags:
       - 'v*'
   pull_request:
@@ -16,7 +17,8 @@ env:
   SLUG_GHCR: ghcr.io/jgwehr/gloomhaven-secretary-server
 
 jobs:
-  validate:
+  build-and-publish-docker-image:
+    name: Build and Publish Docker Image
     runs-on: ubuntu-latest
     steps:
       -
@@ -25,7 +27,7 @@ jobs:
         with:
           fetch-depth: 0
       -
-        name: Docker meta
+        name: Docker metadata
         id: meta
         uses: docker/metadata-action@v4
         with:
