@@ -6,8 +6,8 @@ on:
 name: "Publish Docker Image"
 
 env:
-  SLUG_DOCKERHUB: snoopeppers/gloomhaven-secretary-server
-  SLUG_GHCR: ghcr.io/jgwehr/gloomhaven-secretary-server
+  SLUG_DOCKERHUB: ${{ github.repository_owner }}/ghs-server
+  SLUG_GHCR: ghcr.io/${{ github.repository_owner }}/ghs-server
 
 jobs:
   build-and-publish-docker-image:
